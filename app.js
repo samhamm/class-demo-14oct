@@ -26,7 +26,7 @@ var data = [
 ];
 
 var context = document.getElementById('skills').getContext('2d');
-var skillsChart = new Chart(context).Doughnut(data, {
+var skillsChart = new Chart(context).PolarArea(data, {
     //Number - Amount of animation steps
     animationSteps : 200,
     //String - Animation easing effect
