@@ -1,38 +1,42 @@
-var data = [
+var taValues = [34 ,67, 44, 93];
+
+var kevin = [
   {
-    value: 25,
-    label: 'Alex the Scottish Sensation',
+    value: taValues[0],
+    label: 'Darcy',
     color: '#811BD6',
     highlight: '#811B33'
   },
   {
-    value: 5,
-    label: 'Scott the Alexish Aberration',
+    value: taValues[1],
+    label: 'Emily',
     color: '#9CBABA',
     highlight: '#9CBA99'
   },
   {
-    value: 40,
-    label: 'Emily the Extraordinarily Ectoplasmic',
+    value: taValues[2],
+    label: 'Jonathan',
     color: '#D18177',
     highlight: '#D18133'
   },
   {
-    value : 45,
-    label: 'Bella Bella Bella!!!',
+    value : taValues[3],
+    label: 'Kevin',
     color: '#6AE128',
     highlight: '#6AE199'
   }
 ];
 
-var context = document.getElementById('skills').getContext('2d');
-var skillsChart = new Chart(context).PolarArea(data, {
+var context = document.getElementById('ta-popularity').getContext('2d');
+
+var skillsChart = new Chart(context).Doughnut(kevin, {
     //Number - Amount of animation steps
-    animationSteps : 200,
+    animationSteps : 100,
     //String - Animation easing effect
     animationEasing : "easeOutBounce",
     //Boolean - Whether we animate the rotation of the Doughnut
-    animateRotate : true,
+    animateRotate : false,
     //Boolean - Whether we animate scaling the Doughnut from the centre
-    animateScale : true
+    animateScale : true,
+    scaleShowLabelBackdrop : true
 });
